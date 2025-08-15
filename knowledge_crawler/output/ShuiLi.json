@@ -1,0 +1,35 @@
+{
+    "entity_id": "ShuiLi",
+    "label": "水利",
+    "aliases": [],
+    "source_file": "大渡河知识实体.xlsx",
+    "description": "这是由LLM生成的对'水库调度'的模拟描述。",
+    "background_context": "这是由LLM生成的关于'水库调度'的模拟背景信息。",
+    "entity_type": {
+        "primary_type": "DomainConcept",
+        "sub_type": "EngineeringProcess"
+    },
+    "attributes": {
+        "objectives": [
+            "防洪",
+            "发电",
+            "灌溉"
+        ],
+        "key_constraints": [
+            "防洪限制水位",
+            "下游最小生态流量"
+        ]
+    },
+    "relations": [
+        {
+            "target_entity_id": "OptimizationAlgorithm",
+            "target_label": "优化算法",
+            "relationship_type": "uses_method"
+        },
+        {
+            "target_entity_id": "FloodControlLawOfPRC",
+            "target_label": "中华人民共和国防洪法",
+            "relationship_type": "governed_by"
+        }
+    ]
+}
